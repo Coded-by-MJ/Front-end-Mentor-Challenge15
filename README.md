@@ -31,7 +31,7 @@ Users should be able to:
 ![Mobile View](images/mobile.png)
 
 ### Links
-- Solution URL: [Click to view Solution](https://www.frontendmentor.io/solutions/time-tracking-dashboard-solution-using-css-grid-MX_ntr65HI)
+- Solution URL: [Click to view Solution](https://www.frontendmentor.io/solutions/job-listings-web-page-with-filtering-functionality-xWCVicZn8X)
 - Live Site URL: [Click to view Live Site](https://coded-by-mj.github.io/Front-end-Mentor-Challenge15/)
 
 
