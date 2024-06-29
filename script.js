@@ -15,8 +15,7 @@ const getAllJobs = async ()  => {
 const showAllJobs = (data) => {
 
 const listingHTML = data.map((card) => {
-    const {company, logo, position, featured, postedAt, contract, location} = card;
-    const newJob = card.new;
+const {new: newJob, company, logo, position, featured, postedAt, contract, location} = card;
     const skills = [card.role, card.level, ...card.tools, ...card.languages];
     const skillsButtons = skills.map((skill) => `<button type="button" onclick="addToFilter(event)" class="skill-btn btn" value="${skill}" >${skill}</button>`);
 
@@ -28,8 +27,10 @@ const listingHTML = data.map((card) => {
                    <div class="job-content">
                         <div class="job-info">
                               <h3>${company}</h3>
-                              <div class="badge ${newJob ? 'new' : ''}"> ${newJob ? 'NEW!' : ''} </div>
-                              <div class="badge ${featured ? 'featured' : ''}"> ${featured ? 'FEATURED' : ''}</div>
+
+                              ${newJob ? `<div class="badge new">NEW!</div>`: ''}
+                              
+                             ${newJob ? `<div class="badge featured">FEATURED</div>` : ''}
                         </div>
 
                         <h3 class="job-title">${position}</h3>
@@ -124,7 +125,7 @@ const showOrHideCard = (arr) => {
         arr.forEach(skill => {
             if (cardSkills.includes(skill)) {
                 showCard = true;
-                return false; 
+                return; 
             }
         });
 
