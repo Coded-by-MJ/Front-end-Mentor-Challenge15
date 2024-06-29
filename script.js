@@ -30,7 +30,7 @@ const {new: newJob, company, logo, position, featured, postedAt, contract, locat
 
                               ${newJob ? `<div class="badge new">NEW!</div>`: ''}
                               
-                             ${newJob ? `<div class="badge featured">FEATURED</div>` : ''}
+                             ${featured ? `<div class="badge featured">FEATURED</div>` : ''}
                         </div>
 
                         <h3 class="job-title">${position}</h3>
